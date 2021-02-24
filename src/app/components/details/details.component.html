@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="card mb-4 box-shadow" style="width: 300px;">
+        <img class="card-img-top" src="{{ data?.object?.image }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Order details!</h5>
+            <mat-dialog-content class="dialog-body">
+                <p> <strong>Name: </strong> {{ data?.object?.cust_name }}</p>
+                <p> <strong>Item name: </strong> {{ data?.object?.item_name }}</p>
+                <p> <strong>Item price: </strong> {{ data?.object?.price }}</p>
+                <p> <strong>Item quantity: </strong> {{ data?.object?.no_of_items }}</p>
+
+                <p> <strong>Total price: </strong> {{ data?.object?.no_of_items * data?.object?.price  }}</p>
+                <address><strong>Address: </strong> {{ data?.object?.address }}</address>
+            </mat-dialog-content>
+            <button class="btn btn-primary" (click)="close()">Close</button>
+
+        </div>
+    </div>
+</div>
